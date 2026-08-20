@@ -6,10 +6,9 @@ Espacio para subir practicas de laboratorio de la materia de lenguajes de progra
 
 **Profesor:** Manuel Soto Romero  
 **Ayudantes:** 
-- Diego Mendez Medina  
+- Diego Mendez Medina
+- Erick Daniel Arroyo Martínez
 - José Alejandro Pérez Márquez
-  
-**Lab:**
-- Erick Arroyo 
 - Leslie Paola Sánchez Victoria
+  
 **Materia:** Lenguajes de computacion 2027-1
