@@ -8,6 +8,7 @@ Espacio para subir practicas de laboratorio de la materia de lenguajes de progra
 **Ayudantes:** 
 - Diego Mendez Medina  
 - José Alejandro Pérez Márquez
+  
 **Lab:**
 - Erick Arroyo 
 - Leslie Paola Sánchez Victoria
