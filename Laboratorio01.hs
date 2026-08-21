@@ -18,8 +18,8 @@ sumaCuadradosPares :: [Int] -> Int
 sumaCuadradosPares xs = sum (map(^2) (filter even xs))
 
 -- Reto 3:
--- Es casi el mismo ejercicio que en el pdf solo que aqui se nos pide aplicar la función 3 veces,
--- por lo que con nuestros conocimientos de recursión podemos adaptar el ejemplo a lo que se nos pide
+-- Es casi el mismo ejercicio que en el pdf (dosVeces :: (a -> a) -> a -> a) solo que aqui se nos pide aplicar la función 3 veces,
+-- por lo que solo adaptamos la aplicación anidada de la función f para evaluarla 3 veces.
 aplicaTresVeces :: (a -> a) -> a -> a
 aplicaTresVeces f x = f (f (f x))
 
