@@ -3,6 +3,7 @@ Espacio para subir practicas de laboratorio de la materia de lenguajes de progra
 **Equipo formado por:** 
 - Cano Rodriguez Edgar Yael 322202856
 - Cervantes González Aldo Jael 322230909
+- Mejia Arroyo Diego 322172771
 
 **Profesor:** Manuel Soto Romero  
 **Ayudantes:** 
