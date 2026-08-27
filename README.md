@@ -1,6 +1,7 @@
-# CHILAKILES
+# EQUIPO CHILAKILES
 
 Espacio para subir practicas de laboratorio de la materia de lenguajes de programación (HASKELL)
+
 **Equipo formado por:** 
 - Cano Rodriguez Edgar Yael 322202856
 - Cervantes González Aldo Jael 322230909
