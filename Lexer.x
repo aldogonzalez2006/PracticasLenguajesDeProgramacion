@@ -31,9 +31,26 @@ tokens :-
   @nat                  { \s -> TokenNum (read s) }
 
   -- RETO 1:
-  -- Agrega aqui las reglas lexicas para:
-  --   and, or, *, /, expt, <, >, <=, >=, eq, add1, sub1, zero?
-  -- Recuerda reconocer <= y >= como tokens completos.
+  -- En la izquierda le decimos a Alex lo que debe de buscar en el código, 
+  -- en la derecha \_ define una función anónima y devuelve un valor tipo Token.
+  -- \ es importante porque se lo ponemos a ciertos caracteres que tienen significado propio en Alex
+  -- esto es como decirle que trate el char como lo que estamos definiendo.
+  and           { \_ -> TokenAnd }
+  or            { \_ -> TokenOr }
+  \*            { \_ -> TokenMul }
+  \/            { \_ -> TokenDiv }
+  expt          { \_ -> TokenExpt }
+  "<="          { \_ -> TokenLE } -- LE: Less or equal
+  ">="          { \_ -> TokenGE } -- GE: Greater or equal
+  \<            { \_ -> TokenLT }
+  \>            { \_ -> TokenGT  }
+  eq            { \_ -> TokenEq }
+  add1          { \_ -> TokenAdd1 }
+  sub1          { \_ -> TokenSub1 }
+  "zero?"       { \_ -> TokenZeroP }
+
+-- "" nos permite decirle a Alex que lea las letras z e r o ? es decir 5 chars 
+  
 
   .                     { \s -> error ("Lexical error: caracter no reconocido = "
                                       ++ show s
@@ -66,6 +83,7 @@ data Token
 
 normalizeSpaces :: String -> String
 normalizeSpaces = map (\c -> if isSpace c then '\x20' else c)
+￼
 
 lexer :: String -> [Token]
 lexer = alexScanTokens . normalizeSpaces
