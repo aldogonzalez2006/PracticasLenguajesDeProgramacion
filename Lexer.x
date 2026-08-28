@@ -40,8 +40,8 @@ tokens :-
   \*            { \_ -> TokenMul }
   \/            { \_ -> TokenDiv }
   expt          { \_ -> TokenExpt }
-  "<="          { \_ -> TokenLE } -- LE: Less or equal
-  ">="          { \_ -> TokenGE } -- GE: Greater or equal
+  "<="          { \_ -> TokenLE } 
+  ">="          { \_ -> TokenGE } 
   \<            { \_ -> TokenLT }
   \>            { \_ -> TokenGT  }
   eq            { \_ -> TokenEq }
