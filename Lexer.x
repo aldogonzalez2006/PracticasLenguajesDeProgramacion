@@ -31,7 +31,7 @@ tokens :-
   @nat                  { \s -> TokenNum (read s) }
 
   -- RETO 1:
-  -- En la izquierda le decimos a Alex lo que debe de buscar en el código, 
+  -- En la izquierda le decimos a Alex lo que debe de buscar en el código (expresión regular), 
   -- en la derecha \_ define una función anónima y devuelve un valor tipo Token.
   -- \ es importante porque se lo ponemos a ciertos caracteres que tienen significado propio en Alex
   -- esto es como decirle que trate el char como lo que estamos definiendo.
@@ -49,7 +49,9 @@ tokens :-
   sub1          { \_ -> TokenSub1 }
   "zero?"       { \_ -> TokenZeroP }
 
--- "" nos permite decirle a Alex que lea las letras z e r o ? es decir 5 chars 
+-- "" nos permite decirle a Alex que lea las letras z e r o ? es decir 5 chars, 
+-- por otro lado para <= y >= de igual forma debe reconocerse como un solo token no como > seguido de = asi como lo indica el pdf.
+
   
 
   .                     { \s -> error ("Lexical error: caracter no reconocido = "
@@ -83,7 +85,7 @@ data Token
 
 normalizeSpaces :: String -> String
 normalizeSpaces = map (\c -> if isSpace c then '\x20' else c)
-￼
+
 
 lexer :: String -> [Token]
 lexer = alexScanTokens . normalizeSpaces
